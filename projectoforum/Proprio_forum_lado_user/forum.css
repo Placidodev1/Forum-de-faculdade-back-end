@@ -1,0 +1,410 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* dark shades of primary color*/
+    --clr-background2etxt: #a34354;
+    --clr-parahover:#5e1623;
+    --clr--azulescuro:#0C475E;
+    --clr--azulclaro:#1F82AB;
+        /* primary/main color */
+    --clr-background1: #f2ceae3f;
+    /* lighter shades of primary color */
+    --clr-background3: #d94141;
+    /* darkest grey - used for headings */
+    /* grey used for paragraphs */
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+  /* body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(334deg, #f2ceae3f, #0C475E, #a34354);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+  
+  body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-background1);
+    color: black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+ }
+  
+ /*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .logo {
+    height: 40px;
+  }
+  .links{
+    display: flex;
+    justify-content: center;
+    
+}
+  .links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    color: var(--clr-background2etxt);
+  }
+  .links a:hover {
+    color: var(--clr-parahover);
+    padding-left: 1.5rem;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-icons li {
+    padding-left: 1rem;
+    font-size: 1.15rem;
+  }
+  .social-icons a{
+    color: var(--clr-background2etxt);
+  }
+  .social-icons a:hover{
+    color: var(--clr-parahover);
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+   /*
+=============== 
+Navbar
+===============
+*/
+
+  .barratrocadisciplina{
+    margin-top: 0.5rem;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+  }
+  .conteinerbarra{
+    background: var(--clr-background1);
+    height: 55px;
+    width: 180px;
+    margin-top: 1rem ;
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteinertema{
+    display: flex;
+    gap: 3rem;
+  }
+  .iconeparabaixorotacao, .iconeparabaixoperguntarotacao{
+    transform: rotate(-90deg);
+    color: var(--clr-background2etxt);
+    transition: var(--transition);
+    cursor: pointer;
+    
+  }
+  
+  .divoverlay{
+    position:relative;
+    z-index:1;
+  }
+ .disciplinasbarra{
+  background: var(--clr--azulclaro);
+  width: 180px;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  cursor: pointer;
+  visibility: hidden;
+  z-index: -1;
+ }
+ .show-disciplinasbarra{
+  visibility: visible;
+  z-index: 1;
+}
+ .disciplinasbarra>li{
+    text-transform: uppercase;
+    background: var(--clr--azulescuro);
+    color: var(--clr-white);
+    min-height: 55px;
+    width: 180px;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    margin-bottom: 0.1rem;
+    text-align: center;
+ }
+ .disciplinasbarra>li:hover{
+  background-color: var(--clr--azulclaro);
+  color: var(--clr-black);
+  margin-left: 1.5rem;
+ }
+main{
+    min-height: calc(100vh - 416px);
+    font-family: var(--font-padrao);
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.322);
+    text-align: justify;
+    padding: 20px;
+    
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: var(--ff-primary);
+    text-shadow: var(--dark-shadow);
+  }
+h2{
+    text-shadow: var(--dark-shadow);
+    font-family: var(--ff-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  h3{
+    min-width: 105px;
+  }
+.perguntaeresposta{
+    width: 493.89px;
+    background: var(--clr-background1);
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+    height: 75px;
+    margin: 0 auto;
+    border: 3px solid var(--clr--azulescuro);
+    margin-bottom: 0.5rem;
+}
+.Apergunta{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.conteiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.Caixadepergunta{
+  width: 400px;
+  height: 40px;
+  border-radius: var(--radius);
+}
+.botaoenviar{
+    text-transform: uppercase;
+    background: var(--clr--azulescuro);
+    color: var(--clr-white);
+    width: 90px;
+    height: 40px;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border:none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    margin-bottom: 0.1rem;
+}
+
+.botaoenviar:hover{
+  background: var(--clr-parahover);
+}
+
+.respostas{
+    width: 493.89px;
+    background: var(--clr-background1);
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+    height: 400px;
+    margin: 0 auto;
+    border: 3px solid var(--clr--azulescuro);
+    margin-bottom: 3rem;
+    padding: 0 3rem;
+    overflow-y: scroll;
+    padding-top: 1rem;
+    display: none;
+  }
+  .respostas_mostra{
+    display: block;
+  }
+
+.respostas>div{
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-background2etxt);
+}
+.Caixadepergunta1{
+  height: 23px;
+  width: 300px;
+}
+.botaoenviar1{
+  height: 23px;
+  width: 70px;
+}
+
+footer{
+  background-image: linear-gradient(to left,     #a34355ce,#5e1623);
+}
+.listadelinks{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.titulosfooter{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: var(--dark-shadow);
+}
+.infos>ul>li{
+  text-shadow: var(--light-shadow);
+  background-color: black;
+  padding: 0.1rem 0.5rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.377);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  margin-bottom: 0.1rem;
+}
+.infos>ul>li:hover{
+  background: var(--clr-parahover);
+  transition: var(--transition);
+  padding-left: 1.5rem;
+}
+.Creditos{
+  border-top:  2px solid rgba(255, 255, 255, 0.377);
+  margin-top: 2rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 5px;
+}
+
+.flexgrow0{
+  flex-grow: 0;
+}
+.flexgrow1{
+  margin-bottom: 0px;
+  min-width: 427px;
+  padding-left: 1rem;
+}
+
+/* Centraliza a paginacao */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* Estilo básico dos botões */
+.page-link {
+  color: #333;
+  background-color: var(--clr-background1);
+  border: 1px solid #ddd;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+/* Estilo dos botões de página ativa */
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Estilo dos botões de página hover */
+.page-item:hover .page-link {
+  z-index: 2;
+  color: white;
+  background-color: var(--clr-parahover);
+  border-color: #ddd;
+  padding-left: 1rem;
+  transition: var(--transition);
+}
+
+/* Estilo dos botao activo */
+.activo{
+  color: white;
+  background-color: var(--clr-parahover);
+  border-color: #ddd;
+  padding: .5rem 1rem;
+}
+
+/* Estilo dos botões "Previous" e "Next" */
+.page-item:first-child .page-link{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.page-item:last-child .page-link {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+

@@ -1,0 +1,121 @@
+:root {
+  /* dark shades of primary color*/
+  --clr-background2etxt: #a34354;
+  --clr-parahover:#5e1623;
+  --clr--azulescuro:#0C475E;
+  --clr--azulclaro:#1F82AB;
+      /* primary/main color */
+  --clr-background1: #f2ceae3f;
+  /* lighter shades of primary color */
+  --clr-background3: #d94141;
+  /* darkest grey - used for headings */
+  /* grey used for paragraphs */
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+   body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(334deg, var(--clr-parahover), var(--clr--azulclaro), var(--clr-parahover));
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-secondary);
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: #191919;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: var(--clr-background2etxt);
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--clr-background2etxt);
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    margin-bottom:  2rem;
+    
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--clr-background2etxt);
+    pointer-events: none;
+    font-size: 1rem;
+  }
+  
+  
+  .login-box button {
+    margin-top: 20px;
+    background: var(--clr--azulescuro);
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+  }
+  
+  .login-box button:hover {
+    background: #0082c3;
+  }
+  

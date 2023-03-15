@@ -1,0 +1,100 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* dark shades of primary color*/
+    --clr-background2etxt: #a34354;
+    --clr-parahover:#5e1623;
+    --clr--azulescuro:#0C475E;
+    --clr--azulclaro:#1F82AB;
+        /* primary/main color */
+    --clr-background1: #f2ceae3f;
+    /* lighter shades of primary color */
+    --clr-background3: #d94141;
+    /* darkest grey - used for headings */
+    /* grey used for paragraphs */
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+  body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-background1);
+    color: black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+ }
+  
+ /*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .logo {
+    height: 40px;
+  }
+  .links{
+    display: flex;
+    justify-content: center;
+    
+}
+  .links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    color: var(--clr-background2etxt);
+  }
+  .links a:hover {
+    color: var(--clr-parahover);
+    padding-left: 1.5rem;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-icons li {
+    padding-left: 1rem;
+    font-size: 1.15rem;
+  }
+  .social-icons a{
+    color: var(--clr-background2etxt);
+  }
+  .social-icons a:hover{
+    color: var(--clr-parahover);
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
